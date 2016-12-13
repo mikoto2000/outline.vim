@@ -1,5 +1,5 @@
 """ アウトライン用バッファを開く
-function! outline#OpenOutlineBuffer()
+function outline#OpenOutlineBuffer()
     """ 呼び出し元のウィンドウ ID を記憶
     let s:caller_window_id = win_getid()
 
@@ -35,7 +35,7 @@ function! outline#OpenOutlineBuffer()
 endfunction
 
 """ カーソル上の構造体 or 関数まで移動
-function! outline#GoTarget()
+function outline#GoTarget()
     let line_no = outline#GetLineNo()
     :bwipeout!
 
@@ -47,14 +47,14 @@ function! outline#GoTarget()
 endfunction
 
 """ カーソル上の構造体 or 関数の行番号を取得
-function! outline#GetLineNo()
+function outline#GetLineNo()
     let line = getline(line('.'))
     let splited_line = split(line, ' ', 0)
     return get(splited_line, 0)
 endfunction
 
 """ アウトライン表示用バッファを閉じる
-function! outline#CloseOutlineBuffer()
+function outline#CloseOutlineBuffer()
     """ アウトライン表示用バッファを閉じる
     :bwipeout!
 
@@ -63,7 +63,7 @@ function! outline#CloseOutlineBuffer()
 endfunction
 
 """ ウィンドウサイズ調整
-function! outline#FitWinCol()
+function outline#FitWinCol()
     let current_win_height=winheight('%')
     let line_num=line('$')
     if current_win_height - line_num > 0
