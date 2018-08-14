@@ -10,7 +10,7 @@ function outline#OpenOutlineBuffer()
     silent bo new
 
     """ ctags, awk を使ってアウトラインを作成、バッファに表示する
-    silent execute "read !ctags -x " . file_path . " --sort=no | grep -v member | awk '{$1=\"\";$2=\"\";$3=\"\" + $3;$4=\"\";print}'"
+    silent execute "read !ctags -x --sort=no " . file_path . " | grep -v member | awk '{$1=\"\";$2=\"\";$3=\"\" + $3;$4=\"\";print}'"
     1delete
 
     """ ウィンドウサイズ調整

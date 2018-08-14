@@ -28,7 +28,7 @@ noremap <Leader>o <Esc>:call outline#OpenOutlineBuffer()<Enter>
 License:
 --------
 
-Copyright (C) 2016 mikoto2000
+Copyright (C) 2018 mikoto2000
 
 This software is released under the MIT License, see LICENSE
 
